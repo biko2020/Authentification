@@ -1,22 +1,15 @@
-  // ------- add logo scss ----------
-  .logo {
-      a {
-          background: #000;
+// ------- add logo scss ----------
+.logo {
 
-          flex: 0.5;
-          display: flex;
-          padding: 0px;
-          margin: 0px;
-          background: red;
+    flex: 0.5;
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    background: red;
 
-          img {
-              width: 127.997px;
-              height: 86.73px;
-          }
-      }
-  }
+    img {
+        width: 127.997px;
+        height: 86.73px;
+    }
 
-  h1 {
-      font-size: large;
-      color: red;
-  }
+}
