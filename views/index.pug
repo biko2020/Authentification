@@ -1,0 +1,17 @@
+//- Inherit from a layout file
+extends layout
+
+//- Give the body content from the layout file
+block body_Content
+
+  //- header 
+  include partials/header
+  +header
+
+  //- main 
+  include partials/main
+  +main
+
+  //- footer
+  include partials/footer
+  +footer
