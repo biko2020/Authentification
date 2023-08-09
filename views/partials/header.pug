@@ -1,7 +1,16 @@
 mixin header()
 
+  header
     //-  add web site logo here
     .logo
       a(href='/')
         img(src='/images/logo/logo.svg', alt='logo')
 
+    nav 
+      .menu 
+        ul 
+          li(class=('active'))
+            a(href='/') Inscription
+          
+          li
+            a(href='/') Connexion
