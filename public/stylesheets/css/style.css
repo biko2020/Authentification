@@ -65,4 +65,440 @@ header nav .menu ul li a:hover {
   padding: 15px 40px 15px 40px;
 }
 
+.inscription {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(201, 199, 199, 0.932);
+}
+.inscription .login {
+  position: relative;
+  display: flex;
+  height: 90%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  z-index: 7;
+}
+.inscription .wrapper {
+  display: flex;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 50%;
+  height: 75%;
+  padding: 18px;
+  transform: translate(-60%, -45%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background: #fff;
+}
+.inscription .wrapper .left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inscription .wrapper .left h1 {
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(231, 54, 72);
+  padding: 10px 20px;
+}
+.inscription .wrapper .left .loginButton {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  padding: 10px 20px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.inscription .wrapper .left .loginButton a {
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.inscription .wrapper .left .loginButton a:hover {
+  font-weight: bold;
+}
+.inscription .wrapper .left .loginButton .icon {
+  width: 20px;
+  height: 20px;
+}
+.inscription .wrapper .left .linkedin {
+  background: rgb(36, 44, 65);
+}
+.inscription .wrapper .left .linkedin .in {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border: 0.8px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  background-color: transparent;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  margin-right: 40px;
+}
+.inscription .wrapper .left .linkedin a {
+  color: #fff;
+  text-align: right;
+  padding-top: 5px;
+}
+.inscription .wrapper .left .google {
+  background: #eaeaea;
+}
+.inscription .wrapper .left .google .G {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border: 0.8px solid rgb(231, 54, 72);
+  border-radius: 50%;
+  color: rgb(231, 54, 72);
+  background-color: transparent;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  margin-right: 40px;
+}
+.inscription .wrapper .left .google a {
+  color: rgb(231, 54, 72);
+  padding-top: 5px;
+}
+.inscription .wrapper .left .connexionParEmail {
+  background: rgb(231, 54, 72);
+}
+.inscription .wrapper .left .connexionParEmail .E {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border: 0.8px solid #eaeaea;
+  border-radius: 50%;
+  color: #eaeaea;
+  background-color: transparent;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  margin-right: 40px;
+}
+.inscription .wrapper .left .connexionParEmail a {
+  color: #fff;
+  padding-top: 5px;
+}
+.inscription .wrapper .left .facebook {
+  background: #fff;
+  border: 0.5px solid rgb(36, 44, 65);
+}
+.inscription .wrapper .left .facebook .F {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 14px;
+  border: 0.8px solid rgb(36, 44, 65);
+  border-radius: 50%;
+  color: rgb(36, 44, 65);
+  background-color: transparent;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  margin-right: 40px;
+}
+.inscription .wrapper .left .facebook a {
+  color: rgb(36, 44, 65);
+  padding-top: 5px;
+}
+.inscription .wrapper .left .text p {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(36, 44, 65);
+}
+.inscription .wrapper .left .text p a {
+  color: rgb(231, 54, 72);
+}
+.inscription .wrapper .left .condition {
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+}
+.inscription .wrapper .left .condition p {
+  font-size: 14px;
+  color: rgba(76, 76, 81, 0.79);
+  margin-left: 20px;
+}
+.inscription .wrapper .left .condition p a {
+  color: rgb(36, 44, 65);
+}
+.inscription .wrapper .left-inscription {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inscription .wrapper .left-inscription form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inscription .wrapper .left-inscription form #myRole {
+  display: none;
+}
+.inscription .wrapper .left-inscription form .loginButton {
+  width: 60%;
+  padding: 10px 20px;
+  display: flex;
+  font-size: 24px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.inscription .wrapper .left-inscription form .loginButton a {
+  text-decoration: none;
+}
+.inscription .wrapper .left-inscription form .loginButton a:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+.inscription .wrapper .left-inscription form .loginButton a input {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+.inscription .wrapper .left-inscription form .loginButton a:hover input {
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+}
+.inscription .wrapper .left-inscription form .loginButton .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.inscription .wrapper .left-inscription form .linkedin {
+  background: rgb(36, 44, 65);
+}
+.inscription .wrapper .left-inscription form .linkedin .in {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 8px;
+  border: 0.8px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  background-color: transparent;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  margin-right: 40px;
+}
+.inscription .wrapper .left-inscription form .linkedin a input {
+  background: rgb(36, 44, 65);
+  color: #fff;
+  text-align: right;
+  padding-top: 5px;
+}
+.inscription .wrapper .left-inscription form .google {
+  background: #eaeaea;
+}
+.inscription .wrapper .left-inscription form .google .G {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 8px;
+  border: 0.8px solid rgb(231, 54, 72);
+  border-radius: 50%;
+  color: rgb(231, 54, 72);
+  background-color: transparent;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  margin-right: 40px;
+}
+.inscription .wrapper .left-inscription form .google a input {
+  color: rgb(231, 54, 72);
+  padding-top: 5px;
+  font-size: 24px;
+}
+.inscription .wrapper .left-inscription form .connexionParEmail {
+  background: rgb(231, 54, 72);
+}
+.inscription .wrapper .left-inscription form .connexionParEmail .E {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 8px;
+  border: 0.8px solid #eaeaea;
+  border-radius: 50%;
+  color: #eaeaea;
+  background-color: transparent;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  margin-right: 40px;
+}
+.inscription .wrapper .left-inscription form .connexionParEmail a {
+  color: #fff;
+  padding-top: 5px;
+}
+.inscription .wrapper .left-inscription form .facebook {
+  background: #fff;
+  border: 0.5px solid rgb(36, 44, 65);
+}
+.inscription .wrapper .left-inscription form .facebook .F {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 12px;
+  border: 0.8px solid rgb(36, 44, 65);
+  border-radius: 50%;
+  color: rgb(36, 44, 65);
+  background-color: transparent;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  margin-right: 40px;
+}
+.inscription .wrapper .left-inscription form .facebook a {
+  color: rgb(36, 44, 65);
+}
+.inscription .wrapper .left-inscription form .facebook a input {
+  background-color: #fff;
+  padding-top: 5px;
+}
+.inscription .wrapper .left-inscription form .text p {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(36, 44, 65);
+}
+.inscription .wrapper .left-inscription form .text p a {
+  color: rgb(231, 54, 72);
+}
+.inscription .wrapper .left-inscription form .condition {
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+}
+.inscription .wrapper .left-inscription form .condition p {
+  font-size: 14px;
+  color: rgba(76, 76, 81, 0.79);
+  margin-left: 20px;
+}
+.inscription .wrapper .left-inscription form .condition p a {
+  color: rgb(36, 44, 65);
+}
+.inscription .wrapper .center {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.inscription .wrapper .center .or {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 10px;
+  color: #fff;
+  background-color: rgb(231, 54, 72);
+  font-weight: bold;
+}
+.inscription .wrapper .center .line {
+  width: 0.5px;
+  height: 70%;
+  background-color: rgb(231, 54, 72);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: -1;
+}
+.inscription .wrapper .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inscription .wrapper .right ._message {
+  font-size: 24px;
+  padding: 9px;
+  font-weight: bold;
+}
+.inscription .wrapper .right ._message .confirm {
+  color: rgb(36, 44, 65);
+}
+.inscription .wrapper .right ._message .error {
+  color: rgb(231, 54, 72);
+}
+.inscription .wrapper .right .signUp {
+  text-align: center;
+}
+.inscription .wrapper .right .signUp a {
+  color: rgb(36, 44, 65);
+  text-decoration: none;
+  position: relative;
+  display: flex;
+}
+.inscription .wrapper .right .signUp a:hover {
+  text-decoration: underline;
+}
+.inscription .wrapper .right form {
+  margin-top: -20px;
+  padding: 15px 25px;
+  margin-bottom: 25px;
+  width: 95%;
+}
+.inscription .wrapper .right form .hidding_controls {
+  display: none;
+}
+.inscription .wrapper .right form input {
+  width: 200px;
+  padding: 15px 25px;
+  margin-bottom: 25px;
+  height: 100%;
+  width: 95%;
+  font-size: 14px;
+  border: 1px solid silver;
+}
+.inscription .wrapper .right form input :focus {
+  border-color: rgb(36, 44, 65);
+  border-bottom-width: 2px;
+}
+.inscription .wrapper .right form #role {
+  display: none;
+}
+.inscription .wrapper .right form .submit {
+  width: 200px;
+  background-color: rgb(36, 44, 65);
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  height: 100%;
+  width: 95%;
+}
+.inscription .wrapper .right form .forget-password {
+  margin-top: -8px;
+  padding: 8px;
+}
+.inscription .wrapper .right form .forget-password a {
+  color: rgb(36, 44, 65);
+  text-decoration: none;
+}
+.inscription .wrapper .right form .forget-password a:hover {
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=style.css.map */

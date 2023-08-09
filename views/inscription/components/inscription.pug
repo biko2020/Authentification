@@ -1,0 +1,32 @@
+mixin inscription_component()
+
+    section.inscription
+      .login
+        .wrapper
+          .left
+              h1 #{title}
+              br
+              .loginButton.linkedin
+                .in In
+                a(href="#") Inscription avec Linkedin
+
+              .loginButton.google
+                .G G
+                a(href="#") Inscription avec Google
+
+              .loginButton.connexionParEmail
+                .E.fa.fa-envelope-o.fa-fw
+                a(href="#") Inscription par e-mail 
+
+              .loginButton.facebook
+                .F f
+                a(href="#") Inscription avec Facebook
+          
+              br
+              .text
+                  p Vous avez déjà un compte ?   
+                     a(href="#") Connectez-vous.
+              br        
+              .condition
+                  p En vous inscrivant par e-mail ou Facebook, vous acceptez nos 
+                    a(href="#") mentions legales 

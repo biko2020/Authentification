@@ -2,6 +2,16 @@
     $header_color: rgba(36, 44, 65, 1);
     $red_color: rgba(231, 54, 72, 1);
     $item_color: rgba(232, 232, 232, 1);
+    $gray_color: rgba(201, 199, 199, 0.932);
+    $shadow_First_color: rgba(50, 50, 93, 0.25);
+    $shadow_Second_color: rgba(0, 0, 0, 0.3);
+    $white_color: #fff;
+    $gray_legy_color: #eaeaea;
+
+    // dialogue message color
+    $confirm_color: rgba(36, 44, 65, 1);
+    $error_color: rgba(231, 54, 72, 1);
+    $condition_color: rgba(76, 76, 81, 0.79);
 
 
     // font family
@@ -14,89 +24,623 @@
 
     // all pages
     * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        border: none;
-        text-decoration: none;
-        list-style: none;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      border: none;
+      text-decoration: none;
+      list-style: none;
     }
 
     // body
     body {
-        font-family: $font_Family;
+      font-family: $font_Family;
     }
 
     // header
     header {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 153px;
-        z-index: 1000;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 153px;
+      z-index: 1000;
+      display: flex;
+      background: $header_color;
+
+      // logo
+      .logo {
+
+        flex: 0.5;
         display: flex;
-        background: $header_color;
+        padding: 20px;
+        margin: 0px;
 
-        // logo
-        .logo {
-
-            flex: 0.5;
-            display: flex;
-            padding: 20px;
-            margin: 0px;
-
-            img {
-                width: 127.997px;
-                height: 86.73px;
-            }
-
+        img {
+          width: 127.997px;
+          height: 86.73px;
         }
 
-        // menu
-        nav {
-            flex: 0.3;
+      }
 
-            .menu {
-                padding: 0px;
-                margin: 0px;
+      // menu
+      nav {
+        flex: 0.3;
 
-                ul {
-                    list-style: none;
-                    text-align: left;
+        .menu {
+          padding: 0px;
+          margin: 0px;
 
-                    li {
-                        display: inline-block;
+          ul {
+            list-style: none;
+            text-align: left;
 
-                        a {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            color: $item_color;
-                            font-size: $size14;
-                            padding: 15px 40px 15px 40px;
-                            margin: 20px;
+            li {
+              display: inline-block;
 
-                        }
+              a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $item_color;
+                font-size: $size14;
+                padding: 15px 40px 15px 40px;
+                margin: 20px;
 
-                        &.active {
-                            a {
-                                background: $red_color;
-                                font-weight: bold;
-                                padding: 15px 40px 15px 40px;
-                                
-                            }
-                        }
+              }
 
-                        a:hover {
-                            background: $red_color;
-                            font-weight: bold;
-                            padding: 15px 40px 15px 40px;
-                            
+              &.active {
+                a {
+                  background: $red_color;
+                  font-weight: bold;
+                  padding: 15px 40px 15px 40px;
 
-                        }
-                    }
                 }
+              }
+
+              a:hover {
+                background: $red_color;
+                font-weight: bold;
+                padding: 15px 40px 15px 40px;
+
+
+              }
             }
+          }
         }
+      }
+    }
+
+
+
+    // inscription
+    .inscription {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: $gray_color;
+
+      .login {
+        position: relative;
+        display: flex;
+        height: 90%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        z-index: 7;
+
+
+      }
+
+      .wrapper {
+        display: flex;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        width: 50%;
+        height: 75%;
+        padding: 18px;
+        transform: translate(-60%, -45%);
+        box-shadow: $shadow_First_color 0px 6px 12px -2px,
+          $shadow_Second_color 0px 3px 7px -3px;
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        background: $white_color;
+
+        .left {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          h1 {
+            display: flex;
+            font-size: $size24;
+            font-weight: bold;
+            color: $red_color;
+            padding: 10px 20px;
+
+          }
+
+          .loginButton {
+            display: flex;
+            align-items: center;
+            width: 60%;
+            padding: 10px 20px;
+            font-size: $size14;
+            margin-bottom: 20px;
+            cursor: pointer;
+
+            a {
+              text-decoration: none;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+
+            a:hover {
+              font-weight: bold;
+            }
+
+            .icon {
+              width: 20px;
+              height: 20px;
+              // margin-right: 10px;
+            }
+          }
+
+          .linkedin {
+            background: $header_color;
+
+            .in {
+              display: flex;
+              align-items: center;
+              text-align: center;
+              padding: 10px;
+              border: 0.8px solid $white_color;
+              border-radius: 50%;
+              color: $white_color;
+              background-color: transparent;
+              font-weight: bold;
+              width: 35px;
+              height: 35px;
+              margin-right: 40px;
+            }
+
+            a {
+              color: $white_color;
+              text-align: right;
+              padding-top: 5px;
+            }
+          }
+
+          .google {
+            background: $gray_legy_color;
+
+            .G {
+              display: flex;
+              align-items: center;
+              text-align: center;
+              padding: 10px;
+              border: 0.8px solid $red_color;
+              border-radius: 50%;
+              color: $red_color;
+              background-color: transparent;
+              font-weight: bold;
+              width: 35px;
+              height: 35px;
+              margin-right: 40px;
+            }
+
+            a {
+              color: $red_color;
+              padding-top: 5px;
+            }
+          }
+
+          .connexionParEmail {
+            background: $red_color;
+
+            .E {
+              display: flex;
+              align-items: center;
+              text-align: center;
+              padding: 10px;
+              border: 0.8px solid $gray_legy_color;
+              border-radius: 50%;
+              color: $gray_legy_color;
+              background-color: transparent;
+              font-weight: bold;
+              width: 35px;
+              height: 35px;
+              margin-right: 40px;
+            }
+
+            a {
+              color: $white_color;
+              padding-top: 5px;
+            }
+          }
+
+          .facebook {
+            background: $white_color;
+
+            .F {
+              display: flex;
+              align-items: center;
+              text-align: center;
+              padding: 14px;
+              border: 0.8px solid $header_color;
+              border-radius: 50%;
+              color: $header_color;
+              background-color: transparent;
+              font-weight: bold;
+              width: 35px;
+              height: 35px;
+              margin-right: 40px;
+            }
+
+            a {
+              color: $header_color;
+              padding-top: 5px;
+            }
+
+            border: 0.5px solid $header_color;
+          }
+
+          .text {
+            p {
+              font-size: $size14;
+              font-weight: bold;
+              color: $header_color;
+
+              a {
+                color: $red_color;
+              }
+            }
+          }
+
+          .condition {
+            width: 60%;
+            justify-content: center;
+            align-items: center;
+
+            p {
+              font-size: $size14;
+              color: $condition_color;
+              margin-left: 20px;
+
+              a {
+                color: $header_color;
+              }
+            }
+          }
+        }
+
+        // inscription
+        .left-inscription {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            #myRole {
+              display: none;
+            }
+
+            .loginButton {
+              width: 60%;
+              padding: 10px 20px;
+              display: flex;
+              font-size: $size24;
+              margin-bottom: 20px;
+              cursor: pointer;
+
+              a {
+                text-decoration: none;
+              }
+
+              a:hover {
+                font-weight: bold;
+
+                cursor: pointer;
+              }
+
+              a {
+                input {
+                  text-decoration: none;
+                  cursor: pointer;
+                  font-size: $size24;
+                }
+              }
+
+              a:hover {
+                input {
+                  font-weight: bold;
+                  font-size: $size24;
+                  cursor: pointer;
+                }
+              }
+
+              .icon {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+              }
+            }
+
+            .linkedin {
+              background: $header_color;
+
+              .in {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                padding: 8px;
+                border: 0.8px solid $white_color;
+                border-radius: 50%;
+                color: $white_color;
+                background-color: transparent;
+                font-weight: bold;
+                width: 35px;
+                height: 35px;
+                margin-right: 40px;
+              }
+
+              a {
+                input {
+                  background: $header_color;
+                  color: $white_color;
+                  text-align: right;
+                  padding-top: 5px;
+                }
+              }
+            }
+
+            .google {
+              background: $gray_legy_color;
+
+              .G {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                padding: 8px;
+                border: 0.8px solid $red_color;
+                border-radius: 50%;
+                color: $red_color;
+                background-color: transparent;
+                font-weight: bold;
+                width: 35px;
+                height: 35px;
+                margin-right: 40px;
+              }
+
+              a {
+                input {
+                  color: $red_color;
+                  padding-top: 5px;
+                  font-size: $size24;
+                }
+              }
+            }
+
+            .connexionParEmail {
+              background: $red_color;
+
+              .E {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                padding: 8px;
+                border: 0.8px solid $gray_legy_color;
+                border-radius: 50%;
+                color: $gray_legy_color;
+                background-color: transparent;
+                font-weight: bold;
+                width: 35px;
+                height: 35px;
+                margin-right: 40px;
+              }
+
+              a {
+                color: $white_color;
+                padding-top: 5px;
+              }
+            }
+
+            .facebook {
+              background: $white_color;
+
+              .F {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                padding: 12px;
+                border: 0.8px solid $header_color;
+                border-radius: 50%;
+                color: $header_color;
+                background-color: transparent;
+                font-weight: bold;
+                width: 35px;
+                height: 35px;
+                margin-right: 40px;
+              }
+
+              a {
+                color: $header_color;
+
+                input {
+                  background-color: $white_color;
+                  padding-top: 5px;
+                }
+              }
+
+              border: 0.5px solid $header_color;
+            }
+
+            .text {
+              p {
+                font-size: $size14;
+                font-weight: bold;
+                color: $header_color;
+
+                a {
+                  color: $red_color;
+                }
+              }
+            }
+
+            .condition {
+              width: 60%;
+              justify-content: center;
+              align-items: center;
+
+              p {
+                font-size: $size14;
+                color: $condition_color;
+                margin-left: 20px;
+
+                a {
+                  color: $header_color;
+                }
+              }
+            }
+          }
+        }
+
+        .center {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+
+          .or {
+            border: 2px solid $white_color;
+            border-radius: 50%;
+            padding: 10px;
+            color: $white_color;
+            background-color: $red_color;
+            font-weight: bold;
+          }
+
+          .line {
+            width: 0.5px;
+            height: 70%;
+            background-color: $red_color;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: -1;
+          }
+        }
+
+        .right {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          // ---message d'erreur
+          ._message {
+            font-size: $size24;
+            padding: 9px;
+            font-weight: bold;
+
+            .confirm {
+              color: $confirm_color;
+            }
+
+            .error {
+              color: $error_color;
+            }
+          }
+
+          .signUp {
+            text-align: center;
+
+            a {
+              color: $header_color;
+              text-decoration: none;
+              position: relative;
+              display: flex;
+            }
+
+            a:hover {
+              text-decoration: underline;
+            }
+          }
+
+          form {
+            margin-top: -20px;
+            padding: 15px 25px;
+            margin-bottom: 25px;
+            width: 95%;
+
+            .hidding_controls {
+              display: none;
+            }
+
+            input {
+              width: 200px;
+              padding: 15px 25px;
+              margin-bottom: 25px;
+              height: 100%;
+              width: 95%;
+              font-size: $size14;
+              border: 1px solid silver;
+
+              :focus {
+                border-color: $header_color;
+                border-bottom-width: 2px;
+              }
+            }
+
+            #role {
+              display: none;
+            }
+
+            .submit {
+              width: 200px;
+              background-color: $header_color;
+              color: $white_color;
+              border: none;
+              padding: 15px 25px;
+              border-radius: 5px;
+
+              font-size: $size14;
+              font-weight: 500;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+
+              cursor: pointer;
+              height: 100%;
+              width: 95%;
+            }
+
+            .forget-password {
+              margin-top: -8px;
+              padding: 8px;
+
+              a {
+                color: $header_color;
+                text-decoration: none;
+              }
+
+              a:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
     }
