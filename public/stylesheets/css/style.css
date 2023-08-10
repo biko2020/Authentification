@@ -501,4 +501,176 @@ header nav .menu ul li a:hover {
   text-decoration: underline;
 }
 
+@media (max-width: 576px) {
+  header .logo {
+    flex: 0.2;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  header .logo {
+    flex: 0.2;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  header .logo {
+    flex: 0.2;
+  }
+}
+@media (max-width: 576px) {
+  header .logo img {
+    width: 107.997px;
+    height: 66.73px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  header .logo img {
+    width: 107.997px;
+    height: 66.73px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  header .logo img {
+    width: 147.997px;
+    height: 106.73px;
+  }
+}
+@media (max-width: 576px) {
+  header nav {
+    flex: 0.1;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  header nav {
+    flex: 2;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  header nav {
+    flex: 2;
+  }
+}
+@media (max-width: 576px) {
+  header nav .menu ul li a {
+    margin-bottom: 1px;
+    padding: 4px 16px 0px 16px;
+    width: 100%;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  header nav .menu ul li a {
+    font-size: 16px;
+    width: 100%;
+    padding: 15px 50px 15px 50px;
+    margin: 50px 0px 0px 60px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  header nav .menu ul li a {
+    font-size: 16px;
+    width: 100%;
+    padding: 15px 60px 15px 60px;
+    margin: 50px 0px 0px 60px;
+  }
+}
+@media (max-width: 576px) {
+  header nav .menu ul li.active a {
+    padding: 4px 16px 5px 16px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  header nav .menu ul li.active a {
+    padding: 15px 50px 15px 50px;
+    margin: 50px 0px 0px 60px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  header nav .menu ul li.active a {
+    padding: 15px 50px 15px 50px;
+    margin: 50px 0px 0px 60px;
+  }
+}
+@media (max-width: 576px) {
+  header nav .menu ul li a:hover {
+    padding: 4px 16px 5px 16px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  header nav .menu ul li a:hover {
+    padding: 15px 50px 15px 50px;
+    margin: 50px 0px 0px 60px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  header nav .menu ul li a:hover {
+    padding: 15px 50px 15px 50px;
+    margin: 50px 0px 0px 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .inscription .login .wrapper {
+    top: 60%;
+    left: 58%;
+    width: 85%;
+    height: 75%;
+    padding: 18px;
+    transform: translate(-60%, -45%);
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .inscription .login .wrapper {
+    top: 60%;
+    left: 58%;
+    width: 85%;
+    height: 75%;
+    padding: 18px;
+    transform: translate(-60%, -45%);
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .inscription .login .wrapper {
+    top: 55%;
+    left: 58%;
+    width: 85%;
+    height: 75%;
+    padding: 18px;
+    transform: translate(-60%, -45%);
+  }
+}
+@media (max-width: 576px) {
+  .inscription .login .wrapper .left h1 {
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+    left: 10px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .inscription .login .wrapper .left h1 {
+    text-align: center;
+    justify-content: center;
+    left: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .inscription .login .wrapper .left .loginButton {
+    width: 95%;
+    height: 50px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .inscription .login .wrapper .left .loginButton {
+    width: 75%;
+    height: 50px;
+  }
+}
+.inscription .login .wrapper .left .loginButton a {
+  font-size: 16px;
+}
+@media (max-width: 576px) {
+  .inscription .login .wrapper .left .condition {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

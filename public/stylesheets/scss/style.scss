@@ -21,6 +21,7 @@
     $size14: 14px;
     $size16: 16px;
     $size24: 24px;
+    $size-xs: 12px;
 
     // all pages
     * {
@@ -639,6 +640,284 @@
               a:hover {
                 text-decoration: underline;
               }
+            }
+          }
+        }
+      }
+    }
+
+
+    // Media Query
+
+    $screen_Size-xs: 576px;
+    $screen_Size-sm: 768px;
+    $screen_Size-md: 992px;
+    $screen_Size-lg: 1200px;
+
+    @mixin media-xs {
+      @media (max-width: $screen_Size-xs) {
+        @content;
+      }
+    }
+
+    @mixin media-sm {
+      @media (min-width: $screen_Size-xs) and (max-width: $screen_Size-sm) {
+        @content;
+      }
+    }
+
+    @mixin media-md {
+      @media (min-width: $screen_Size-sm) and (max-width: $screen_Size-md) {
+        @content;
+      }
+    }
+
+    @mixin media-lg {
+      @media (min-width: $screen_Size-md) and (max-width: $screen_Size-lg) {
+        @content;
+      }
+    }
+
+    @mixin media-xl {
+      @media (min-width: $screen_Size-lg) {
+        @content;
+      }
+    }
+
+
+    // Media Query for header
+
+    header {
+      .logo {
+        @include media-xs {
+          flex: 0.2;
+        }
+
+        @include media-sm {
+          flex: 0.2;
+        }
+
+        @include media-md {
+          flex: 0.2;
+        }
+
+        @include media-xl {}
+
+        @include media-lg {}
+
+
+        img {
+          @include media-xs {
+            width: 107.997px;
+            height: 66.73px;
+          }
+
+          @include media-sm {
+            width: 107.997px;
+            height: 66.73px;
+          }
+
+          @include media-md {}
+
+          @include media-xl {}
+
+          @include media-lg {
+            width: 147.997px;
+            height: 106.73px;
+          }
+        }
+      }
+
+      nav {
+        @include media-xs {
+          flex: 0.1;
+        }
+
+        @include media-sm {
+          flex: 2;
+        }
+
+        @include media-md {}
+
+        @include media-xl {}
+
+        @include media-lg {
+          flex: 2;
+        }
+
+        .menu {
+          ul {
+            li {
+              a {
+                @include media-xs {
+
+                  margin-bottom: 1px;
+                  padding: 4px 16px 0px 16px;
+                  width: 100%;
+                }
+
+                @include media-sm {
+
+                  font-size: $size16;
+                  width: 100%;
+                  padding: 15px 50px 15px 50px;
+                  margin: 50px 0px 0px 60px;
+
+                }
+
+                @include media-md {}
+
+                @include media-xl {}
+
+                @include media-lg {
+                  font-size: $size16;
+                  width: 100%;
+                  padding: 15px 60px 15px 60px;
+                  margin: 50px 0px 0px 60px;
+                }
+              }
+
+              &.active {
+                a {
+                  @include media-xs {
+                    padding: 4px 16px 5px 16px;
+                  }
+
+                  @include media-sm {
+                    padding: 15px 50px 15px 50px;
+                    margin: 50px 0px 0px 60px;
+
+                  }
+
+                  @include media-md {}
+
+                  @include media-xl {}
+
+                  @include media-lg {
+                    padding: 15px 50px 15px 50px;
+                    margin: 50px 0px 0px 60px;
+                  }
+                }
+              }
+
+              a:hover {
+                @include media-xs {
+                  padding: 4px 16px 5px 16px;
+                }
+
+                @include media-sm {
+                  padding: 15px 50px 15px 50px;
+                  margin: 50px 0px 0px 60px;
+
+                }
+
+                @include media-md {}
+
+                @include media-xl {}
+
+                @include media-lg {
+                  padding: 15px 50px 15px 50px;
+                  margin: 50px 0px 0px 60px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Media Query for inscription
+
+    .inscription {
+      .login {
+
+        .wrapper {
+          @include media-xs {
+            top: 60%;
+            left: 58%;
+            width: 85%;
+            height: 75%;
+            padding: 18px;
+            transform: translate(-60%, -45%);
+          }
+          @include media-sm {
+            top: 60%;
+            left: 58%;
+            width: 85%;
+            height: 75%;
+            padding: 18px;
+            transform: translate(-60%, -45%);
+          }
+          @include media-md {}
+
+          @include media-xl {}
+
+          @include media-lg {
+            top: 55%;
+            left: 58%;
+            width: 85%;
+            height: 75%;
+            padding: 18px;
+            transform: translate(-60%, -45%);
+          }
+
+          .left {
+            h1 {
+              @include media-xs {
+                font-size: $size16;
+                text-align: center;
+                justify-content: center;
+                left: 10px;
+              }
+
+              @include media-sm {}
+
+              @include media-md {}
+
+              @include media-xl {}
+
+              @include media-lg {
+                // font-size: $size16;
+                text-align: center;
+                justify-content: center;
+                left: 10px;
+              }
+            }
+
+            .loginButton {
+              @include media-xs {
+                width: 95%;
+                height: 50px;
+              }
+
+              @include media-sm {}
+
+              @include media-md {}
+
+              @include media-xl {}
+
+              @include media-lg {
+                width: 75%;
+                height: 50px;
+              }
+
+              a {
+                font-size: $size16;
+              }
+            }
+
+            .condition {
+              @include media-xs {
+                width: 100%;
+              }
+
+              @include media-sm {}
+
+              @include media-md {}
+
+              @include media-xl {}
+
+              @include media-lg {}
             }
           }
         }
