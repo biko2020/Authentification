@@ -7,9 +7,15 @@ block body_Content
     include ../partials/header
     +header 
 
+
     //- get inscription page from inscrition directory
-    include components/inscription
-    +inscription_component
+    if registration_type === 'email'
+        include components/formulaire
+        +formulaire_component
+    else
+        include components/inscription
+        +inscription_component
+
 
     //- get footer from partials directory
     include ../partials/footer

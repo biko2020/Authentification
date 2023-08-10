@@ -114,7 +114,7 @@
 
 
 
-    // inscription
+    // interface d'inscription
     .inscription {
       position: absolute;
       width: 100%;
@@ -317,239 +317,58 @@
             }
           }
         }
+      }
+    }
 
-        // inscription
-        .left-inscription {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+    // formulaire d'inscription par e-mail
+    .formulaire_inscription {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: $gray_color;
 
-          form {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+      .login {
+        position: relative;
+        display: flex;
+        height: 90%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        z-index: 7;
 
-            #myRole {
-              display: none;
-            }
 
-            .loginButton {
-              width: 60%;
-              padding: 10px 20px;
-              display: flex;
-              font-size: $size24;
-              margin-bottom: 20px;
-              cursor: pointer;
+      }
 
-              a {
-                text-decoration: none;
-              }
-
-              a:hover {
-                font-weight: bold;
-
-                cursor: pointer;
-              }
-
-              a {
-                input {
-                  text-decoration: none;
-                  cursor: pointer;
-                  font-size: $size24;
-                }
-              }
-
-              a:hover {
-                input {
-                  font-weight: bold;
-                  font-size: $size24;
-                  cursor: pointer;
-                }
-              }
-
-              .icon {
-                width: 20px;
-                height: 20px;
-                margin-right: 10px;
-              }
-            }
-
-            .linkedin {
-              background: $header_color;
-
-              .in {
-                display: flex;
-                align-items: center;
-                text-align: center;
-                padding: 8px;
-                border: 0.8px solid $white_color;
-                border-radius: 50%;
-                color: $white_color;
-                background-color: transparent;
-                font-weight: bold;
-                width: 35px;
-                height: 35px;
-                margin-right: 40px;
-              }
-
-              a {
-                input {
-                  background: $header_color;
-                  color: $white_color;
-                  text-align: right;
-                  padding-top: 5px;
-                }
-              }
-            }
-
-            .google {
-              background: $gray_legy_color;
-
-              .G {
-                display: flex;
-                align-items: center;
-                text-align: center;
-                padding: 8px;
-                border: 0.8px solid $red_color;
-                border-radius: 50%;
-                color: $red_color;
-                background-color: transparent;
-                font-weight: bold;
-                width: 35px;
-                height: 35px;
-                margin-right: 40px;
-              }
-
-              a {
-                input {
-                  color: $red_color;
-                  padding-top: 5px;
-                  font-size: $size24;
-                }
-              }
-            }
-
-            .connexionParEmail {
-              background: $red_color;
-
-              .E {
-                display: flex;
-                align-items: center;
-                text-align: center;
-                padding: 8px;
-                border: 0.8px solid $gray_legy_color;
-                border-radius: 50%;
-                color: $gray_legy_color;
-                background-color: transparent;
-                font-weight: bold;
-                width: 35px;
-                height: 35px;
-                margin-right: 40px;
-              }
-
-              a {
-                color: $white_color;
-                padding-top: 5px;
-              }
-            }
-
-            .facebook {
-              background: $white_color;
-
-              .F {
-                display: flex;
-                align-items: center;
-                text-align: center;
-                padding: 12px;
-                border: 0.8px solid $header_color;
-                border-radius: 50%;
-                color: $header_color;
-                background-color: transparent;
-                font-weight: bold;
-                width: 35px;
-                height: 35px;
-                margin-right: 40px;
-              }
-
-              a {
-                color: $header_color;
-
-                input {
-                  background-color: $white_color;
-                  padding-top: 5px;
-                }
-              }
-
-              border: 0.5px solid $header_color;
-            }
-
-            .text {
-              p {
-                font-size: $size14;
-                font-weight: bold;
-                color: $header_color;
-
-                a {
-                  color: $red_color;
-                }
-              }
-            }
-
-            .condition {
-              width: 60%;
-              justify-content: center;
-              align-items: center;
-
-              p {
-                font-size: $size14;
-                color: $condition_color;
-                margin-left: 20px;
-
-                a {
-                  color: $header_color;
-                }
-              }
-            }
-          }
-        }
-
-        .center {
-          height: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-
-          .or {
-            border: 2px solid $white_color;
-            border-radius: 50%;
-            padding: 10px;
-            color: $white_color;
-            background-color: $red_color;
-            font-weight: bold;
-          }
-
-          .line {
-            width: 0.5px;
-            height: 70%;
-            background-color: $red_color;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            z-index: -1;
-          }
-        }
+      .wrapper {
+        display: flex;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        width: 50%;
+        height: 75%;
+        padding: 18px;
+        transform: translate(-60%, -45%);
+        box-shadow: $shadow_First_color 0px 6px 12px -2px,
+          $shadow_Second_color 0px 3px 7px -3px;
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        background: $white_color;
 
         .right {
           flex: 1;
           display: flex;
           flex-direction: column;
           align-items: center;
+
+          h1 {
+            display: flex;
+            font-size: $size24;
+            font-weight: bold;
+            color: $red_color;
+            padding: 10px 20px;
+
+          }
 
           // ---message d'erreur
           ._message {
@@ -595,7 +414,7 @@
               width: 200px;
               padding: 15px 25px;
               margin-bottom: 25px;
-              height: 100%;
+              height: 50px;
               width: 95%;
               font-size: $size14;
               border: 1px solid silver;
@@ -624,7 +443,7 @@
               letter-spacing: 1px;
 
               cursor: pointer;
-              height: 100%;
+              height: 50px;
               width: 95%;
             }
 
@@ -645,7 +464,6 @@
         }
       }
     }
-
 
     // Media Query
 
@@ -840,6 +658,7 @@
             padding: 18px;
             transform: translate(-60%, -45%);
           }
+
           @include media-sm {
             top: 60%;
             left: 58%;
@@ -848,6 +667,7 @@
             padding: 18px;
             transform: translate(-60%, -45%);
           }
+
           @include media-md {}
 
           @include media-xl {}

@@ -1,0 +1,27 @@
+mixin formulaire_component()
+
+    section.formulaire_inscription
+      .login
+        .wrapper
+          .right
+            h1 #{title}
+            br
+            ._message
+             p(class=(_valeurMsg))
+              | #{msg}       
+            br  
+             //- envoyer la demande d'inscription au controlleur   
+            form(action='/profile_Action/inscription' method='POST' enctype="multipart/form-data")
+              input#role(type='text' name='role' value=role)
+              label(for='email')
+              input#email(type='email', name='email' placeholder=' votre email' )
+              label(for='password')
+              input#password(type='password', name='password' placeholder='votre password') 
+              label(for='retappassword') 
+              input#retappassword(type='password', name='retappassword' placeholder='confirmer password')
+              button.submit(type='submit') Enregistrer
+              br
+              .signUp-link
+              br
+              | déjà inscrit ? 
+              a(href='/connexion') connecter vous
