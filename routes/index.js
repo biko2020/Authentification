@@ -1,6 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
+
+// call a controller
+var controller = require('../controllers/action_Save_User');
+
+
 // GET home page.
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'Authentification using node.js' });
@@ -23,5 +28,9 @@ router.get("/routeToRegistrationByEmail", function (req, res, next) {
     registration_type: "email"
   });
 });
+
+
+// POST route_To_Save_User_Data, Enregistrer les donnees utilisateur
+router.post("/routeToSaveUserData", controller.routeToSaveUserData);
 
 module.exports = router;

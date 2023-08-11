@@ -447,18 +447,22 @@
               width: 95%;
             }
 
-            .forget-password {
-              margin-top: -8px;
-              padding: 8px;
+            .signUp-link {
+
+              font-size: $size14;
+
+              color: $header_color;
 
               a {
-                color: $header_color;
-                text-decoration: none;
+                width: 60%;
+                color: $condition_color;
+                justify-content: center;
+                align-items: center;
+
+                margin-left: 20px;
+
               }
 
-              a:hover {
-                text-decoration: underline;
-              }
             }
           }
         }
@@ -728,6 +732,142 @@
 
             .condition {
               @include media-xs {
+                width: 100%;
+              }
+
+              @include media-sm {}
+
+              @include media-md {}
+
+              @include media-xl {}
+
+              @include media-lg {}
+            }
+          }
+        }
+      }
+    }
+
+    .formulaire_inscription {
+      .login {
+
+        .wrapper {
+          @include media-xs {
+            top: 60%;
+            left: 58%;
+            width: 85%;
+            height: 75%;
+            padding: 18px;
+            transform: translate(-60%, -45%);
+          }
+
+          @include media-sm {
+            top: 60%;
+            left: 58%;
+            width: 85%;
+            height: 75%;
+            padding: 18px;
+            transform: translate(-60%, -45%);
+          }
+
+          @include media-md {}
+
+          @include media-xl {}
+
+          @include media-lg {
+            top: 55%;
+            left: 58%;
+            width: 85%;
+            height: 75%;
+            padding: 18px;
+            transform: translate(-60%, -45%);
+          }
+
+          .right {
+            h1 {
+              @include media-xs {
+                font-size: $size14;
+                text-align: center;
+                justify-content: center;
+                left: 10px;
+              }
+
+              @include media-sm {}
+
+              @include media-md {
+                font-size: $size16;
+                text-align: center;
+                justify-content: center;
+                left: 10px;
+              }
+
+              @include media-xl {}
+
+              @include media-lg {
+                font-size: $size16;
+                text-align: center;
+                justify-content: center;
+                left: 10px;
+
+              }
+            }
+
+            ._message {
+              @include media-xs {
+                font-size: $size16;
+              }
+            }
+
+            form {
+              @include media-lg {
+                text-align: center;
+                justify-content: center;
+              }
+
+              input {
+                @include media-xs {
+                  width: 95%;
+                  height: 35px;
+                }
+
+                @include media-sm {}
+
+                @include media-md {}
+
+                @include media-xl {}
+
+                @include media-lg {
+                  width: 75%;
+                  height: 50px;
+                }
+              }
+
+              .submit {
+                @include media-xs {
+                  width: 95%;
+                  height: 45px;
+                  font-size: $size-xs;
+
+                }
+
+                @include media-sm {}
+
+                @include media-md {}
+
+                @include media-xl {}
+
+                @include media-lg {
+                  width: 75%;
+                  height: 50px;
+                }
+              }
+
+            }
+
+            .condition {
+
+              @include media-xs {
+                font-size: $size14;
                 width: 100%;
               }
 

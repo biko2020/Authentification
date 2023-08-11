@@ -3,7 +3,7 @@ const getFile_DotEnv = require("dotenv");
 
 // get path .env file
 getFile_DotEnv.config({
-    path: "./.env",
+    // path: "../.env",
 });
 
 // connect to database
