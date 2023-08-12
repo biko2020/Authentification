@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 
-// call a controller
-var controller = require('../controllers/action_Save_User');
+// call user controller
+var controller = require('../controllers/user_controller');
 
 
 // GET home page.
@@ -30,7 +30,7 @@ router.get("/routeToRegistrationByEmail", function (req, res, next) {
 });
 
 
-// POST route_To_Save_User_Data, Enregistrer les donnees utilisateur
-router.post("/routeToSaveUserData", controller.routeToSaveUserData);
+// Appel  la fonction saveUser du controlleur user
+router.post("/saveUser", controller.saveUser);
 
 module.exports = router;
