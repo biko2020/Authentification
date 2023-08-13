@@ -31,6 +31,6 @@ router.get("/routeToRegistrationByEmail", function (req, res, next) {
 
 
 // Appel  la fonction saveUser du controlleur user
-router.post("/saveUser", controller.saveUser);
+router.post("/saveUserLogin", controller.saveUserLogin);
 
 module.exports = router;

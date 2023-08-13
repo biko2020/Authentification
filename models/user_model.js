@@ -8,12 +8,14 @@ const user = {
 
     // @ INSERT DATA LOGIN TO USER TABLE
 
-    user_Login: (dataLogin, callback) => {
-        const { email, password } = dataLogin;
+    saveUserLogin: (dataLogin, callback) => {
+        
+        const { email, password, date_inscription } = dataLogin;
 
-        const query = 'insert into user (email, pwd)  values(?, ?, ?)';
+  
+        const query = 'insert into user (email, pwd, date_inscription)  values(?, ?, ?)';
 
-        db_connect.query(query, [email, password], (error, results) => {
+        db_connect.query(query, [email, password, date_inscription], (error, results) => {
             if (error) {
                 console.error('Error saving login user:', error);
                 return callback(error);

@@ -11,7 +11,7 @@ mixin formulaire_component()
               | #{msg}       
             br  
                 
-            form(action='/saveUser' method='POST' enctype="multipart/form-data")
+            form(action='/saveUserLogin' method='POST')
               input#role(type='text' name='role' value=role)
               label(for='email')
               input#email(type='email', name='email' placeholder=' votre email' )
@@ -19,9 +19,17 @@ mixin formulaire_component()
               input#password(type='password', name='password' placeholder='votre password') 
               label(for='retappassword') 
               input#retappassword(type='password', name='retappassword' placeholder='confirmer password')
+              input#date_inscription(type='hidden', name='date_inscription', readonly)
               button.submit(type='submit') Enregistrer
               br
               .signUp-link
                 br
                 | déjà inscrit ? 
                 a(href='/connexion') connecter vous
+                
+            script.
+              document.addEventListener('DOMContentLoaded', () => {
+                const currentDateInput = document.getElementById('date_inscription');
+                const currentDate = new Date().toISOString().split('T')[0]; 
+                currentDateInput.value = currentDate;
+              });    

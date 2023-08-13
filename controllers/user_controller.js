@@ -1,12 +1,13 @@
 const userModel = require('../models/user_model');
 
 // function Save User Login Data
-exports.user_Login = (req, res) => {
+exports.saveUserLogin = (req, res) => {
     try {
-        const { email, password } = req.body;
+
+        const { email, password, date_inscription } = req.body;
 
         // Call the appropriate method from UserModel for user login
-        UserModel.user_Login({ email, password }, (error, result) => {
+        userModel.saveUserLogin({ email, password, date_inscription }, (error, result) => {
             if (error) {
                 return res.status(500).json({ error: 'An error occurred' });
             }
