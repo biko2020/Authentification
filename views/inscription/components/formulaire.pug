@@ -12,7 +12,7 @@ mixin formulaire_component()
             br  
                 
             form(action='/saveUserLogin' method='POST')
-              input#role(type='text' name='role' value=role)
+              input#role(type='text' name='role' value="admin")
               label(for='email')
               input#email(type='email', name='email' placeholder=' votre email' )
               label(for='password')

@@ -5,7 +5,7 @@ const bcrypt = require("bcryptjs");
 exports.saveUserLogin = async (req, res) => {
     try {
 
-        const { email, password, retappassword, date_inscription } = req.body;
+        const { email, password, retappassword, date_inscription, role } = req.body;
 
         // Test if fields are empty
 
@@ -25,12 +25,12 @@ exports.saveUserLogin = async (req, res) => {
 
             })
         }
-        
+
         // @ Encrypter le mot de passe sur 8 bits
         let hashPassword = await bcrypt.hash(password, 8);
 
         // Call the appropriate method from UserModel for saveUserLogin
-        userModel.saveUserLogin({ email, hashPassword, date_inscription }, (error, result) => {
+        userModel.saveUserLogin({ email, hashPassword, date_inscription, role }, (error, result) => {
             if (error) {
                 return res.status(500).json({ error: 'error' });
             }
