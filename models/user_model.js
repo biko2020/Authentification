@@ -1,26 +1,27 @@
-// call data base configuration 
+// call data base configuration fron db_config
 const db_connect = require("../config/db_config.js");
 
 
-// Create a class user 
+// Create user class for this user_model
 
 const user = {
 
-    // @ INSERT DATA LOGIN TO USER TABLE
-
+    // Get Data login from user_controller
     saveUserLogin: (dataLogin, callback) => {
-        
-        const { email, password, date_inscription } = dataLogin;
 
-  
+        const { email, hashPassword, date_inscription } = dataLogin;
+
         const query = 'insert into user (email, pwd, date_inscription)  values(?, ?, ?)';
 
-        db_connect.query(query, [email, password, date_inscription], (error, results) => {
+        // @ INSERT DATA LOGIN TO USER TABLE
+        db_connect.query(query, [email, hashPassword, date_inscription], (error, results) => {
+
             if (error) {
                 console.error('Error saving login user:', error);
                 return callback(error);
             }
             return callback(results);
+
         });
     }
 };
