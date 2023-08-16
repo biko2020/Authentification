@@ -33,4 +33,15 @@ router.get("/routeToRegistrationByEmail", function (req, res, next) {
 // Appel  la fonction saveUser du controlleur user
 router.post("/saveUserLogin", controller.saveUserLogin);
 
+
+// GET confirmToken with id and token
+router.get(
+  "/confirmToken/:id/:token",
+  controller.confirmToken,
+  function (req, res) {
+    res.render("/");
+  }
+);
+
+
 module.exports = router;

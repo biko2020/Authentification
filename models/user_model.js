@@ -14,15 +14,19 @@ const user = {
         // @ INSERT DATA LOGIN TO user TABLE
         const insert_UserLogin = 'insert into user (email, pwd, date_inscription)  values(?, ?, ?)';
 
+        // @ SELECT role_id FORM role 
+        const select_role_id = 'select role_id from role where role_name = ?';
+
+        // @ INSERT user_id and role_id INTO user_role
+        const insert_User_Role = 'insert into user_role (user_id, role_id) values(?, ?) ';
+
+
         db_connect.query(insert_UserLogin, [email, hashPassword, date_inscription], (error, results) => {
 
             if (error) {
                 console.error('Error saving login user:', error);
                 return callback(error);
             }
-
-            // @ SELECT role_id FORM role 
-            const select_role_id = 'select role_id from role where role_name = ?';
 
             db_connect.query(select_role_id, [role], (error_role_id, results_role_id) => {
                 if (error_role_id) {
@@ -38,9 +42,8 @@ const user = {
                 // Get results_role_id content
                 const role_Id = results_role_id[0].role_id;
 
-                // @ INSERT user_id and role_id INTO user_role
+                // Get user_id from results
                 const user_Id = results.insertId;
-                const insert_User_Role = 'insert into user_role (user_id, role_id) values(?, ?) ';
 
                 db_connect.query(insert_User_Role, [user_Id, role_Id], (error_User_role, results_user_role) => {
                     if (error_User_role) {
@@ -49,7 +52,8 @@ const user = {
                     }
                 });
 
-                return callback(results);
+                return callback(null, { user_id: user_Id, results });
+
 
             });
 
